@@ -8,15 +8,6 @@
 module.exports = Route;
 
 /**
- * Regexp
- */
-
-var escape_regexp = /[\-{}\[\]+?.,\\\^$|#\s]/g;
-var optional_param = /\((.*?)\)/g;
-var named_param = /:(\w+)/g;
-var splat_param = /\*\w+/g;
-
-/**
  * @constructor Router
  * @description Create a router.
  * @api public
