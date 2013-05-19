@@ -54,7 +54,7 @@ function path_to_regexp (path, keys) {
       return '(.*?)';
     };
   
-  regexp = new RegExp('^' + path + '$');
+  var regexp = new RegExp('^' + path + '$');
 
   return { regexp: regexp, keys: keys };
 }
