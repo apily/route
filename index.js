@@ -38,26 +38,23 @@ Route.prototype.match = function (path) {
   var params = [];
   var keys = this.keys;
   var regexp = this.regexp;
-  var qs_index;
   var match;
   var n;
   var i;
   var key;
   var val;
 
-  qs_index = path.indexOf('?')
-  if (qs_index !== -1) {
-    path = path.slice(0, qs_index);
-  }
+  path = path.split('?')[0];
 
   match = regexp.exec(path);
+
   if (!match) {
     return false;
   }
 
   match = match.splice(1);
   n = match.length;
-  for (i = 0, i < n; i += 1) {
+  for (i = 0; i < n; i += 1) {
     key = keys[i];
     val = decodeURIComponent(match[i]);
     
@@ -93,10 +90,10 @@ Route.prototype.create_regexp = function (path, keys) {
       keys.push(key);
       return '([^\/]+)';
     })
-    .replace(/\*\w+/g, function (match, key) {
+    .replace(/\*(\w*)/g, function (match, key) {
       keys.push(key);
       return '(.*?)';
-    };
+    });
   
   var regexp = new RegExp('^' + path + '$');
 
