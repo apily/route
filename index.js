@@ -79,9 +79,7 @@ Route.prototype.create_regexp = function (path, keys) {
   keys = keys || [];
 
   path = path
-    .replace(/[\-{}\[\]+?.,\\\^$|#\s]/g, function (match) {
-      return '\\$&';
-    })
+    .replace(/[\-{}\[\]+?.,\\\^$|#\s]/g, '\\$&')
     .replace(/\((.*?)\)/g, function (match, key) {
       keys.push(key);
       return '([^\/]+)?';
