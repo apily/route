@@ -10,11 +10,28 @@ Route component
 
 ### Route(String:path)
 
-Create a route
+Create a route.
 
 ```js
 var route = new Route('/users/:user_id');
 ```
+
+### Route#create_regexp(String:path, [Array:keys])
+
+Create the regexp that matches `path`.
+
+```js
+route.create_regexp('/users/:user_id');
+```
+
+### Route#match(String:path)
+
+Test if `path` matches this route.
+
+```js
+route.match('/users/007');
+```
+
 
 ## License
 
