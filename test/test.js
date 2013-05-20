@@ -1,5 +1,5 @@
-var Route = require('index.js');
-var assert = require('assert');
+var Route = require('route');
+var assert = require('component-assert');
 
 describe('Route#match(path)', function(){
   it('should match paths and return matches', function(){
