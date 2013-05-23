@@ -1,0 +1,30 @@
+{  
+  "name": "route",
+  "description": "Route component",
+  "version": "0.0.1",
+  "author": {
+      "name": "Enrico Marino",
+      "url": "enricomarino.com"
+  },
+  "maintainers": [
+    {
+      "name": "Enrico Marino",
+      "url": "enricomarino.com"
+    },
+    {
+      "name": "Federico Spini",
+      "url": "federicospini.com"
+    }
+  ],
+  "homepage": "https://github.com/apily/route",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/apily/route.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
