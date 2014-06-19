@@ -1,0 +1,10 @@
+{
+  "name": "apily-route",
+  "version": "0.1.0",
+  "scripts": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "description": "Router route component",
+  "keywords": ["router", "route"],
+  "license": "MIT"
+}
